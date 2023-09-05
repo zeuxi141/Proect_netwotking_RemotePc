@@ -1,7 +1,7 @@
 import os
 
 BUFFSIZE = 1024 * 4
-def shutdownAndlogout(client):
+def shutdown_logout(client):
     while(True):
         message = client.recv(BUFFSIZE).decode("utf8")
         if "SHUTDOWN" in message:

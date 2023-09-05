@@ -1,6 +1,6 @@
 import tkinter as tk
 
-def closeEvent(main, client):
+def close_event(main, client):
     client.sendall(bytes("QUIT", "utf8"))
     main.destroy()
     return
@@ -10,7 +10,7 @@ def shutdown(client):
 def logout(client):
     client.sendall(bytes("LOGOUT", "utf8"))
 
-def shutdownAndlogout(client, root):
+def shutdown_logout(client, root):
     window = tk.Toplevel(root)
     window.geometry("190x160")
     window.grab_set()
